@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Poppins:wght@100;300;400;500;600;800&family=Roboto:wght@100;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* section {
+  height: 100vh;
+} */
+
+:root {
+  --color-bg: #f490d1;
+  --color-bg-variant: #3d9663;
+  --color-primary: #62ffc5;
+  --color-primary-variant: rgb(22, 57, 46);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-black: rgb(0, 0, 0);
+
+  --container-width-lg: 83%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+
+  --transition: 400ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-circle {
+  background-color: var(--color-bg-variant);
+  position: absolute;
+  border-radius: 50%;
+  width: 100vw;
+  height: 85vw;
+  top: calc((100vh - 85vw) / 2);
+  left: -50%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+a {
+  color: var(--color-light);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  background-color: #6cba8e00;
+  color: var(--color-black);
+  padding: 0.75rem 1.2rem;
+  border-radius: 60px;
+  cursor: pointer;
+  border: none;
+  transition: 500ms;
+  border: 2px solid rgba(0, 0, 0, 0.277);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.501);
+  color: var(--color-black);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .background-circle {
+    top: -15vh;
+    height: 70vh;
+    width: 70vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
